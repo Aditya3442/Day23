@@ -1,0 +1,15 @@
+class Solution {
+    public int appendCharacters(String s, String t) {
+       int i=0;
+       int j=0;
+       StringBuilder sb1=new StringBuilder(s);
+       StringBuilder sb2=new StringBuilder(t);
+       while(i<sb1.length() && j<sb2.length()){
+           if(sb1.charAt(i)==sb2.charAt(j)){
+               j++;
+           }
+           i++;
+       }
+        return sb2.length()-j;
+    }
+}
